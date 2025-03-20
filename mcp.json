@@ -1,0 +1,30 @@
+{
+  "name": "MyServer",
+  "version": "1.0.0",
+  "description": "A simple MCP server",
+  "args": ["mcp-server.py"],
+  "tools": [
+    {
+      "name": "expand_content_tool",
+      "description": "Expands content and updates Confluence page",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "header": {
+            "type": "string",
+            "description": "The header for the content section"
+          },
+          "original_content": {
+            "type": "string",
+            "description": "The original content to be expanded"
+          },
+          "expanded_content": {
+            "type": "string",
+            "description": "The expanded content"
+          }
+        },
+        "required": ["header", "original_content", "expanded_content"]
+      }
+    }
+  ]
+}
